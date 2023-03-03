@@ -12,7 +12,7 @@
     <description>Sample codes in order to help developers use it as resources</description>
 
     <modules>
-
+        <module>liberty-mongodb</module>
     </modules>
 
 </project>
