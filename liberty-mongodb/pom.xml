@@ -15,6 +15,7 @@
     <maven.compiler.source>11</maven.compiler.source>
     <final.name>liberty-mongodb</final.name>
     <slf4j.api.version>1.7.30</slf4j.api.version>
+    <jnosql.version>1.0.0-b6-SNAPSHOT</jnosql.version>
   </properties>
   <dependencies>
     <dependency>
@@ -24,7 +25,55 @@
       <type>pom</type>
       <scope>provided</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.eclipse.jnosql.mapping</groupId>
+      <artifactId>jnosql-mongodb-extension</artifactId>
+      <version>${jnosql.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>jakarta.data</groupId>
+      <artifactId>jakarta-data-api</artifactId>
+      <version>1.0.0-b1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.eclipse.jnosql.mapping</groupId>
+      <artifactId>jnosql-mapping-validation</artifactId>
+      <version>${jnosql.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>jakarta.platform</groupId>
+      <artifactId>jakarta.jakartaee-api</artifactId>
+      <version>9.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+
   </dependencies>
+  <repositories>
+    <repository>
+      <id>jakarta.sonatype.org-snapshot</id>
+      <url>https://jakarta.oss.sonatype.org/content/repositories/snapshots/</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>oss.sonatype.org-snapshot</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
   <build>
     <finalName>liberty-mongodb</finalName>
   </build>

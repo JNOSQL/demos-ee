@@ -9,6 +9,11 @@ The generation of the executable jar file can be performed by issuing the follow
 
     mvn clean package
 
+This application requires a MongoDB instance running on port 27017. Run this docker-compose to start the containers.
+
+    docker-compose up -d
+
+
 This will create an executable jar file **liberty-mongodb.jar** within the _target_ maven folder. This can be started by executing the following command
 
     java -jar target/liberty-mongodb.jar
