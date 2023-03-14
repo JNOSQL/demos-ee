@@ -1,26 +1,59 @@
-# MicroProfile generated Application
+= MicroProfile Open Liberty with MongoDB sample
 
-## Introduction
+This project is intent to be a sample for MicroProfile with MongoDB integration by using Jakarta NoSQL implementation.
 
-MicroProfile Starter has generated this MicroProfile application for you.
+== Setup MongoDB
+
+image::https://camo.githubusercontent.com/1aacb96d0e51dbeaf857769687250eeb0bc122fec48cfc9d192e4d81b3552090/687474703a2f2f7777772e6a6e6f73716c2e6f72672f696d672f6c6f676f732f6d6f6e676f64622e706e67[]
+
+*MongoDB* is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemas.
+
+To run this project a MongoDB instance is required, so you can use either a local installation or using Docker.
+
+== Using Docker Compose
+
+The easier way to execute this project is to use the provided docker-compose.yaml file in the root directory.
+
+The project is configured to reach out a MongoDB instance with the following configuration:
+
+    Database=causedatabase
+    Port= 27017
+    User=root
+    Password=example
+    Authentication Source=admin
+
+*PS:warning:* Pay attention to that when you try to set up your own MongoDB instance.
+
+You can run it by performing the following command:
+
+    docker-compose up -d
+
+
+== Local installation
+
+Follow the instructions in: https://docs.mongodb.com/manual/installation/
+
+== Using Docker
+
+1. Install docker: https://www.docker.com/
+2. https://store.docker.com/images/mongo
+3. Run docker command
+4. Run MongoDB: verify MongoDB image name with the command `docker images`, it can be mongodb or mongo, and then execute this command
+1. `docker run -d --name mongodb-instance -e       MONGO_INITDB_ROOT_USERNAME=root MONGO_INITDB_ROOT_PASSWORD=example -p 27017:27017 mongo`
+
+
+== Run the code
 
 The generation of the executable jar file can be performed by issuing the following command
 
-
     mvn clean package
-
-This application requires a MongoDB instance running on port 27017. Run this docker-compose to start the containers.
-
-    docker-compose up -d
 
 
 This will create an executable jar file **liberty-mongodb.jar** within the _target_ maven folder. This can be started by executing the following command
 
     java -jar target/liberty-mongodb.jar
 
-
-
-### Liberty Dev Mode
+=== Liberty Dev Mode
 
 During development, you can use Liberty's development mode (dev mode) to code while observing and testing your changes on the fly.
 With the dev mode, you can code along and watch the change reflected in the running server right away; 
@@ -39,7 +72,7 @@ To launch the test page, open your browser at the following URL
 
 
 
-## Specification examples
+=== Specification examples
 
 By default, there is always the creation of a JAX-RS application class to define the path on which the JAX-RS endpoints are available.
 
@@ -48,7 +81,7 @@ Also, a simple Hello world endpoint is created, have a look at the class **Hello
 More information on MicroProfile can be found [here](https://microprofile.io/)
 
 
-### Config
+=== Config
 
 Configuration of your application parameters. Specification [here](https://microprofile.io/project/eclipse/microprofile-config)
 
