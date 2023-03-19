@@ -1,4 +1,4 @@
-package org.eclipse.jnosql.demoee.liberty.mongodb;
+package org.jnosql.demoee.liberty.mongodb;
 
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;

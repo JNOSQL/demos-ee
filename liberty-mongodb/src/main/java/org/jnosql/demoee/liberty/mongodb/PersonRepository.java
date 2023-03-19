@@ -1,4 +1,4 @@
-package org.eclipse.jnosql.demoee.liberty.mongodb;
+package org.jnosql.demoee.liberty.mongodb;
 
 import jakarta.data.repository.CrudRepository;
 import jakarta.data.repository.Repository;

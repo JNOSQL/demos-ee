@@ -1,4 +1,4 @@
-package org.eclipse.jnosql.demoee.liberty.mongodb.config;
+package org.jnosql.demoee.liberty.mongodb.config;
 
 import org.eclipse.microprofile.config.Config;
 import org.eclipse.microprofile.config.ConfigProvider;
