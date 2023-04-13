@@ -15,7 +15,7 @@
     <maven.compiler.source>11</maven.compiler.source>
     <final.name>liberty-mongodb</final.name>
     <slf4j.api.version>1.7.30</slf4j.api.version>
-    <jnosql.version>1.0.0-b6-SNAPSHOT</jnosql.version>
+    <jnosql.version>1.0.0-SNAPSHOT</jnosql.version>
   </properties>
   <dependencies>
     <dependency>
@@ -27,20 +27,8 @@
     </dependency>
 
     <dependency>
-      <groupId>org.eclipse.jnosql.mapping</groupId>
-      <artifactId>jnosql-mongodb-extension</artifactId>
-      <version>${jnosql.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>jakarta.data</groupId>
-      <artifactId>jakarta-data-api</artifactId>
-      <version>1.0.0-b1</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.eclipse.jnosql.mapping</groupId>
-      <artifactId>jnosql-mapping-validation</artifactId>
+      <groupId>org.eclipse.jnosql.databases</groupId>
+      <artifactId>jnosql-mongodb</artifactId>
       <version>${jnosql.version}</version>
     </dependency>
 
