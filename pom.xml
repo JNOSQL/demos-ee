@@ -11,8 +11,12 @@
     <url>https://github.com/JNOSQL/demo-ee</url>
     <description>Sample codes in order to help developers use it as resources</description>
 
+    <properties>
+        <jnosql.version>1.0.0-SNAPSHOT</jnosql.version>
+    </properties>
     <modules>
         <module>liberty-mongodb</module>
+        <module>wildfly-mongodb</module>
     </modules>
 
 </project>

@@ -12,4 +12,8 @@ The primary goal of this repository is exploring the Jakarta NoSQL on several da
 |MicroProfile - Open Liberty
 |MongoDB
 
+|wildfly-mongodb
+|Full Profile - Wildfly
+|MongoDB
+
 |===
