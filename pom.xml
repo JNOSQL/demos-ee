@@ -17,6 +17,7 @@
     <modules>
         <module>liberty-mongodb</module>
         <module>wildfly-mongodb</module>
+        <module>jnosql-bean-validation</module>
     </modules>
 
 </project>
