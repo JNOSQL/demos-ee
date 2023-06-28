@@ -16,4 +16,8 @@ The primary goal of this repository is exploring the Jakarta NoSQL on several da
 |Full Profile - Wildfly
 |MongoDB
 
+|jnosql-bean-validation
+|MicroProfile - OpenLiberty
+|MongoDB
+
 |===
