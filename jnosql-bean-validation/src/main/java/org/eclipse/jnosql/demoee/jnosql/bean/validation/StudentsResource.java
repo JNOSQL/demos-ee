@@ -3,6 +3,7 @@ package org.eclipse.jnosql.demoee.jnosql.bean.validation;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.nosql.Template;
+import jakarta.validation.Valid;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
@@ -36,11 +37,15 @@ public class StudentsResource {
                     content = @Content(
                             mediaType = MediaType.APPLICATION_JSON,
                             schema = @Schema(
-                                    ref = "Student"))
+                                    ref = "NewStudent"))
             )})
     @POST
-    public Student add(Student newStudent){
-        return template.insert(newStudent);
+    public Student add(@Valid NewStudent newStudent){
+
+        var student = newStudent.toModel();
+
+        return template.insert(student);
     }
+
 
 }

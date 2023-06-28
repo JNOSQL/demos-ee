@@ -16,6 +16,7 @@
         <final.name>jnosql-bean-validation</final.name>
         <slf4j.api.version>1.7.30</slf4j.api.version>
         <jnosql.version>1.0.0</jnosql.version>
+        <jakarta.validation-api.version>3.0.2</jakarta.validation-api.version>
     </properties>
     <dependencies>
         <dependency>
@@ -38,7 +39,7 @@
         <dependency>
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
-            <version>3.0.2</version>
+            <version>${jakarta.validation-api.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
