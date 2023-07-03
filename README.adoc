@@ -1,23 +1,26 @@
 = Jakarta NoSQL samples code
 
-This repository has several samples Enterprise Edition with Jakarta EE/Microprofile
+This repository has several samples of Enterprise Edition with Jakarta EE/Microprofile
 
-The primary goal of this repository is exploring the Jakarta NoSQL on several databases.
+The primary goal of this repository is to explore Jakarta NoSQL on several databases.
 
 [cols="Table's name"]
 |===
-|Name|MicroProfile/Jakarta EE Implementation|NoSQL types
+|Name|MicroProfile/Jakarta EE Implementation|NoSQL types|Description
 
 |liberty-mongodb
 |MicroProfile - Open Liberty
 |MongoDB
+|Simple CRUD REST application with MicroProfile
 
 |wildfly-mongodb
 |Full Profile - Wildfly
 |MongoDB
+|Simple CRUD REST application with Wildfly 
 
 |jnosql-bean-validation
 |MicroProfile - OpenLiberty
 |MongoDB
+|Simple CRUD REST application with Jakarta Bean Validation integration
 
 |===
