@@ -21,6 +21,6 @@ The primary goal of this repository is to explore Jakarta NoSQL on several datab
 |jnosql-bean-validation
 |MicroProfile - OpenLiberty
 |MongoDB
-|Simple CRUD REST application and validate data with bean-validation
+|Simple CRUD REST application with Jakarta Bean Validation integration
 
 |===
