@@ -28,5 +28,10 @@ The primary goal of this repository is to explore Jakarta NoSQL on several datab
 |MongoDB
 |Simple CRUD REST application with Quarkus
 
+|tomee-jnosql-sample
+|MicroProfile - Apache TomEE
+|MongoDB
+|Simple CRUD REST application with Apache TomEE
+
 
 |===
