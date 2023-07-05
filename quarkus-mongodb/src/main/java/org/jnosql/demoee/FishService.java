@@ -50,7 +50,7 @@ public class FishService {
             f.color = fish.color;
             return this.template.update(f);
         });
-        //you should have a proper exception, only for demo proposes
+
     }
 
 
