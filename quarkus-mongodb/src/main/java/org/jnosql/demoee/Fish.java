@@ -1,7 +1,6 @@
 package org.jnosql.demoee;
 
 
-import java.util.List;
 import java.util.Objects;
 
 import jakarta.nosql.Column;
@@ -12,13 +11,13 @@ import jakarta.nosql.Id;
 public class Fish {
 
     @Id
-    private String id;
+    public String id;
 
     @Column
-    private String name;
+    public String name;
 
     @Column
-    private String color;
+    public String color;
 
     public String getId() {
         return id;
@@ -42,6 +41,11 @@ public class Fish {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public void update(Fish fish){
+        this.name = fish.name;
+        this.color = fish.color;
     }
 
     @Override
