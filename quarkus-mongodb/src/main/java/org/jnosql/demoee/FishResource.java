@@ -28,7 +28,7 @@ public class FishResource {
 
     }
 
-     @GET
+    @GET
     public List<Fish> findAll(){
        return this.service.findAll();
     }

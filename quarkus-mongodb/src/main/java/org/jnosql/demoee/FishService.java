@@ -1,6 +1,8 @@
 package org.jnosql.demoee;
 
 
+import com.github.javafaker.Animal;
+import com.github.javafaker.Faker;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.nosql.document.DocumentTemplate;
@@ -16,6 +18,8 @@ public class FishService {
 
     @Inject
     private DocumentTemplate template;
+
+    private Faker faker = new Faker();
 
 
     public List<Fish> findAll() {
@@ -36,9 +40,10 @@ public class FishService {
 
     public Fish random() {
         Fish fish = new Fish();
-        fish.name = "";
-        fish.color = "";
-        return fish;
+        Animal animal = faker.animal();
+        fish.name = animal.name();
+        fish.color = faker.color().name();
+        return this.template.insert(fish);
     }
 
     public Optional<Fish> update(String id, Fish fish) {
