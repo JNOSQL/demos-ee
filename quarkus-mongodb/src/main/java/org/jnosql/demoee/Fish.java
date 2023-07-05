@@ -2,13 +2,14 @@ package org.jnosql.demoee;
 
 
 import java.util.List;
+import java.util.Objects;
 
 import jakarta.nosql.Column;
 import jakarta.nosql.Entity;
 import jakarta.nosql.Id;
 
 @Entity
-public class Person {
+public class Fish {
 
     @Id
     private String id;
@@ -17,7 +18,7 @@ public class Person {
     private String name;
 
     @Column
-    private List<String> phones;
+    private String color;
 
     public String getId() {
         return id;
@@ -35,12 +36,37 @@ public class Person {
         this.name = name;
     }
 
-    public List<String> getPhones() {
-        return phones;
+    public String getColor() {
+        return color;
     }
 
-    public void setPhones(List<String> phones) {
-        this.phones = phones;
+    public void setColor(String color) {
+        this.color = color;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Fish fish = (Fish) o;
+        return Objects.equals(id, fish.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return "Fish{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }
