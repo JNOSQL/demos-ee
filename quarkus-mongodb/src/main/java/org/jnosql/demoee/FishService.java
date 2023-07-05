@@ -41,8 +41,6 @@ public class FishService {
         return fish;
     }
 
-
-
     public Optional<Fish> update(String id, Fish fish) {
         Optional<Fish> optional = this.template.find(Fish.class, new ObjectId(id));
         return optional.map(f -> {
@@ -52,9 +50,5 @@ public class FishService {
         });
 
     }
-
-
-
-
 
 }
