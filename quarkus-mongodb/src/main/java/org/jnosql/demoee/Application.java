@@ -16,6 +16,7 @@ public class Application {
     private EntitiesMetadata entities;
 
     void onStart(@Observes StartupEvent ev) {
+        LOGGER.info("Starting application loading entities");
         entities.get(Fish.class);
     }
 }
