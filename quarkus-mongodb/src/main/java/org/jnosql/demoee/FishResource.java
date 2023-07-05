@@ -2,11 +2,10 @@ package org.jnosql.demoee;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import jakarta.nosql.document.DocumentTemplate;
 import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.Response;
 
 import java.util.List;
-import java.util.UUID;
 
 @Path("/fishes")
 @ApplicationScoped
@@ -16,13 +15,20 @@ public class FishResource {
     private FishService service;
 
     @GET
-    public Fish hello() {
-        Fish fish = new Fish();
-        fish.setName(UUID.randomUUID().toString());
-        fish.setColor("Blue");
-        return service.insert(fish);
+    @Path("{id}")
+    public Fish findId(@PathParam("id") String id) {
+        return service.findById(id)
+                .orElseThrow(() -> new WebApplicationException(Response.Status.NOT_FOUND));
     }
 
+    @GET
+    @Path("random")
+    public Fish random(){
+       return service.random();
+
+    }
+
+     @GET
     public List<Fish> findAll(){
        return this.service.findAll();
     }
@@ -36,7 +42,8 @@ public class FishResource {
     @PUT
     @Path("{id}")
     public Fish update(@PathParam("id") String id, Fish fish){
-       return this.service.update(id, fish);
+       return this.service.update(id, fish)
+               .orElseThrow(() -> new WebApplicationException(Response.Status.NOT_FOUND));
     }
 
     @DELETE
