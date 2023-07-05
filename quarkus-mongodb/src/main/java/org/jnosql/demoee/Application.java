@@ -6,9 +6,12 @@ import jakarta.enterprise.event.Observes;
 import jakarta.inject.Inject;
 import org.eclipse.jnosql.mapping.reflection.EntitiesMetadata;
 
+import java.util.logging.Logger;
+
 @ApplicationScoped
 public class Application {
 
+    private static final Logger LOGGER = Logger.getLogger(Application.class.getName());
     @Inject
     private EntitiesMetadata entities;
 
