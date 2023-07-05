@@ -6,26 +6,21 @@ import jakarta.nosql.document.DocumentTemplate;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
-import java.util.Arrays;
 import java.util.UUID;
 
-@Path("/jnosql")
+@Path("/fishes")
 @ApplicationScoped
-public class PeopleResource {
+public class FishResource {
 
     @Inject
     private DocumentTemplate template;
 
     @GET
-    public String hello() {
+    public Fish hello() {
         Fish fish = new Fish();
         fish.setName(UUID.randomUUID().toString());
-        fish.setPhones(
-                Arrays.asList(
-                        UUID.randomUUID().toString(),
-                        UUID.randomUUID().toString(),
-                        UUID.randomUUID().toString()));
+        fish.setColor("Blue");
         Fish insert = template.insert(fish);
-        return insert.getId();
+        return insert;
     }
 }
