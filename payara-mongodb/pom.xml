@@ -8,17 +8,17 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <properties>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.target>17</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <payaraVersion>5.2021.1</payaraVersion>
+        <maven.compiler.source>17</maven.compiler.source>
+        <payaraVersion>6.2023.6</payaraVersion>
         <final.name>payara-mongodb</final.name>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.eclipse.microprofile</groupId>
             <artifactId>microprofile</artifactId>
-            <version>4.0.1</version>
+            <version>6.0</version>
             <type>pom</type>
             <scope>provided</scope>
         </dependency>
@@ -37,7 +37,7 @@
                     <plugin>
                         <groupId>fish.payara.maven.plugins</groupId>
                         <artifactId>payara-micro-maven-plugin</artifactId>
-                        <version>1.0.5</version>
+                        <version>2.0</version>
                         <executions>
                             <execution>
                                 <phase>package</phase>
