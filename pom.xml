@@ -20,7 +20,6 @@
         <module>jnosql-bean-validation</module>
         <module>quarkus-mongodb</module>
         <module>tomee-jnosql-sample</module>
-        <module>payara-mongodb</module>
     </modules>
 
 </project>
