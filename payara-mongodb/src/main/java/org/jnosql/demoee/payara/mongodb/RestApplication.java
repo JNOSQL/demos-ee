@@ -1,8 +1,8 @@
 package org.jnosql.demoee.payara.mongodb;
 
-import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.ws.rs.ApplicationPath;
-import jakarta.ws.rs.core.Application;
+import javax.enterprise.context.ApplicationScoped;
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Application;
 
 /**
  *

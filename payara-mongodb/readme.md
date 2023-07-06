@@ -6,20 +6,24 @@ MicroProfile Starter has generated this MicroProfile application for you.
 
 The generation of the executable jar file can be performed by issuing the following command
 
+```shell
+ mvn clean package
+```
 
-    mvn clean package
 
 This will create an executable jar file **payara-mongodb-microbundle.jar** within the _target_ maven folder. This can be started by executing the following command
 
-    java -jar target/payara-mongodb-microbundle.jar
-
+```shell
+java -jar target/payara-mongodb-microbundle.jar
+```
 
 
 
 To launch the test page, open your browser at the following URL
 
-    http://localhost:8080/index.html  
-
+```shell
+http://localhost:8080/index.html  
+```
 
 
 ## Specification examples
