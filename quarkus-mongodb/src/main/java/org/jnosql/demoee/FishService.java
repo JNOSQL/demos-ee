@@ -20,7 +20,7 @@ public class FishService {
     @Inject
     private DocumentTemplate template;
 
-    private Faker faker = new Faker();
+    private final Faker faker = new Faker();
 
 
     public List<Fish> findAll() {
