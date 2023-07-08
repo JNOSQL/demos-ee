@@ -18,6 +18,8 @@
         <module>liberty-mongodb</module>
         <module>wildfly-mongodb</module>
         <module>jnosql-bean-validation</module>
+        <module>quarkus-mongodb</module>
+        <module>tomee-jnosql-sample</module>
         <module>quarkus-jnosql-mongodb</module>
     </modules>
 

@@ -23,9 +23,19 @@ The primary goal of this repository is to explore Jakarta NoSQL on several datab
 |MongoDB
 |Simple CRUD REST application with Jakarta Bean Validation integration
 
-|quarkus-jnosql-mongodb
-|Quarkus
+|quarkus-mongodb
+|MicroProfile - Quarkus
 |MongoDB
-|Simple CRUD REST application with Quarkus and JNoSQL integration
+|Simple CRUD REST application with Quarkus
+
+|tomee-jnosql-sample
+|MicroProfile - Apache TomEE
+|MongoDB
+|Simple CRUD REST application with Apache TomEE
+
+|quarkus-jnosql-mongodb
+|MicroProfile - Quarkus
+|MongoDB
+|Simple CRUD REST application with Quarkus using Records as entity
 
 |===
