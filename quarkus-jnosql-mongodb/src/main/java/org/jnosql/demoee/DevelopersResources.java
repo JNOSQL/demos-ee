@@ -1,4 +1,4 @@
-package org.jnosql.sample;
+package org.jnosql.demoee;
 
 import jakarta.inject.Inject;
 import jakarta.nosql.document.DocumentTemplate;
