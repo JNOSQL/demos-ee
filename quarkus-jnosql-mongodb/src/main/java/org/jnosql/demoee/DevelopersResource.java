@@ -12,7 +12,7 @@ import java.util.List;
 @Path("developers")
 @Consumes({MediaType.APPLICATION_JSON})
 @Produces({MediaType.APPLICATION_JSON})
-public class DevelopersResources {
+public class DevelopersResource {
 
     @Inject
     DocumentTemplate template;
@@ -22,7 +22,7 @@ public class DevelopersResources {
         return template.select(Developer.class).result();
     }
 
-    @Path("/byName")
+    @Path("/findByName")
     @GET
     public List<Developer> findByName(@QueryParam("name") String name) {
         return template.select(Developer.class)
@@ -36,22 +36,33 @@ public class DevelopersResources {
 
     @POST
     public Developer add(NewDeveloperRequest request) {
-
         var newDeveloper = Developer.newDeveloper(request.name(), request.birthday());
-
         return template.insert(newDeveloper);
     }
 
     @Path("{id}")
     @GET
-    public Developer getDeveloper(@PathParam("id") String id) {
+    public Developer get(@PathParam("id") String id) {
         return template.find(Developer.class, id)
                 .orElseThrow(() -> new WebApplicationException(Response.Status.NOT_FOUND));
     }
 
+    public record UpdateDeveloperRequest(String name, LocalDate birthday) {
+    }
+
+    @Path("{id}")
+    @PUT
+    public Developer update(@PathParam("id") String id, UpdateDeveloperRequest request) {
+        var developer =  template.find(Developer.class, id)
+                .orElseThrow(() -> new WebApplicationException(Response.Status.NOT_FOUND));
+        var updatedDeveloper = developer.update(request.name(),request.birthday());
+        return template.update(updatedDeveloper);
+
+    }
+
     @Path("{id}")
     @DELETE
-    public void deleteDeveloper(@PathParam("id") String id) {
+    public void delete(@PathParam("id") String id) {
         template.delete(Developer.class,id);
     }
 
