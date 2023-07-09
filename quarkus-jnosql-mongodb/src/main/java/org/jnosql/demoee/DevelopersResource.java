@@ -18,13 +18,10 @@ public class DevelopersResource {
     DocumentTemplate template;
 
     @GET
-    public List<Developer> listAll() {
-        return template.select(Developer.class).result();
-    }
+    public List<Developer> listAll(@QueryParam("name") String name) {
+        if (name == null)
+            return template.select(Developer.class).result();
 
-    @Path("/findByName")
-    @GET
-    public List<Developer> findByName(@QueryParam("name") String name) {
         return template.select(Developer.class)
                 .where("name")
                 .like(name)
@@ -53,9 +50,9 @@ public class DevelopersResource {
     @Path("{id}")
     @PUT
     public Developer update(@PathParam("id") String id, UpdateDeveloperRequest request) {
-        var developer =  template.find(Developer.class, id)
+        var developer = template.find(Developer.class, id)
                 .orElseThrow(() -> new WebApplicationException(Response.Status.NOT_FOUND));
-        var updatedDeveloper = developer.update(request.name(),request.birthday());
+        var updatedDeveloper = developer.update(request.name(), request.birthday());
         return template.update(updatedDeveloper);
 
     }
@@ -63,7 +60,7 @@ public class DevelopersResource {
     @Path("{id}")
     @DELETE
     public void delete(@PathParam("id") String id) {
-        template.delete(Developer.class,id);
+        template.delete(Developer.class, id);
     }
 
 }
