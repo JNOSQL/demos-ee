@@ -229,5 +229,7 @@ nbdist/
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/maven,intellij+all,eclipse,netbeans,visualstudiocode
+
+# Plugin directory
 .quarkus
 .quarkus/*
