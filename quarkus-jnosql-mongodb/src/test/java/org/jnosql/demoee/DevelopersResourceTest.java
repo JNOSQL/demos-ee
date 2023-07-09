@@ -72,29 +72,51 @@ class DevelopersResourceTest {
 
         given()
                 .params("name", "M")
-                .when().get("/developers/findByName")
+                .when().get("/developers")
                 .then()
                 .statusCode(200)
                 .body("size()", is(0));
 
-        var expectedDeveloper = Developer.newDeveloper(
+        given()
+                .when().get("/developers")
+                .then()
+                .statusCode(200)
+                .body("size()", is(0));
+
+        var maximillianArruda = Developer.newDeveloper(
                 "Maximillian Arruda",
                 LocalDate.ofInstant(faker.date().birthday().toInstant(), ZoneId.systemDefault())
         );
 
-        template.insert(expectedDeveloper);
+        var johnDoe = Developer.newDeveloper(
+                "John Doe",
+                LocalDate.ofInstant(faker.date().birthday().toInstant(), ZoneId.systemDefault())
+        );
+
+        List<Developer> persistedDevelopers = List.of(maximillianArruda, johnDoe);
+
+        template.insert(persistedDevelopers);
 
         var result = given()
                 .params("name", "M")
-                .when().get("/developers/findByName")
+                .when().get("/developers")
                 .then()
                 .statusCode(200)
                 .extract()
                 .body()
-                .as(new TypeRef<List<Developer>>() {
-                });
+                .as(new TypeRef<List<Developer>>() {});
 
-        assertThat(result).containsAll(List.of(expectedDeveloper));
+        assertThat(result).containsAll(List.of(maximillianArruda));
+
+
+        var result2 = given()
+                .when().get("/developers")
+                .then()
+                .statusCode(200)
+                .extract()
+                .body()
+                .as(new TypeRef<List<Developer>>() {});
+        assertThat(result2).containsAll(persistedDevelopers);
 
     }
 
