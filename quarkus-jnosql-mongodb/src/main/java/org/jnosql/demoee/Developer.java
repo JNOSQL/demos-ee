@@ -23,4 +23,13 @@ public record Developer(
                 name,
                 birthday);
     }
+
+    public Developer update(String name, LocalDate birthday) {
+        Objects.requireNonNull(name, "name is required");
+        Objects.requireNonNull(birthday, "birthday is required");
+        return new Developer(
+                this.id(),
+                name,
+                birthday);
+    }
 }
