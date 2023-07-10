@@ -1,4 +1,5 @@
 = Jakarta NoSQL samples code
+:toc: auto
 
 This repository has several samples of Enterprise Edition with Jakarta EE/Microprofile
 
