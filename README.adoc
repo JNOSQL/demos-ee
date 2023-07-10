@@ -1,7 +1,11 @@
 = Jakarta NoSQL samples code
 :toc: auto
 
-This documentation provides an overview of the integration between Eclipse JNoSQL and the Jakarta EE/MicroProfile platforms. We will delve into the concepts and capabilities of Eclipse JNoSQL and explore its seamless integration with popular application servers such as Open Liberty, Quarkus, and WildFly. These application servers are renowned for supporting Jakarta EE and MicroProfile specifications, making them ideal choices for deploying enterprise-grade applications. By understanding the features and benefits of these platforms, developers can leverage the power of JNoSQL to efficiently work with NoSQL databases within their Jakarta EE or MicroProfile applications.
+This documentation provides an overview of the integration between Eclipse JNoSQL and the Jakarta EE/MicroProfile platforms.
+We will delve into the concepts and capabilities of Eclipse JNoSQL and explore its seamless integration with popular application servers
+such as Open Liberty, Quarkus, and WildFly. These application servers are renowned for supporting Jakarta EE and MicroProfile specifications,
+making them ideal choices for deploying enterprise-grade applications. By understanding the features and benefits of these platforms,
+developers can leverage the power of JNoSQL to efficiently work with NoSQL databases within their Jakarta EE or MicroProfile applications.
 
 == Open Liberty
 
