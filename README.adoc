@@ -9,11 +9,20 @@ image::pictures/open-liberty.png[Open liberty, width=150px]
 
 Open Liberty is a lightweight and highly flexible open-source application server that supports the Jakarta EE and MicroProfile specifications. It offers a production-ready runtime environment focusing on rapid development and cloud-native deployments. Open Liberty provides extensive support for enterprise features like security, transactions, and messaging while ensuring a small footprint and fast startup times.
 
+=== Projects
+
+* link:liberty-mongodb/[Simple CRUD REST application with MicroProfile]
+* link:jnosql-bean-validation/[Simple CRUD REST application with Jakarta Bean Validation integration]
+
 == Wildfly
 
 image::pictures/wildfly.png[Widlfly, width=150px]
 
 WildFly, formerly JBoss Application Server, is an open-source, lightweight, and flexible application server built to support the Jakarta EE platform. It offers a complete Java EE-compatible runtime environment with a wide range of features and services required for enterprise-grade applications. WildFly strongly emphasizes standards compliance and provides extensive support for Jakarta EE specifications, making it a popular choice for Java developers.
+
+=== Projects
+
+* link:wildfly-mongodb/[Simple CRUD REST application with Wildfly]
 
 == Quarkus
 
@@ -21,6 +30,20 @@ image::pictures/quarkus.png[Quarkus, width=150px]
 
 Quarkus is a modern Kubernetes-native Java framework designed for cloud-native application development. It aims to optimize developer productivity, resource utilization, and startup times without sacrificing the ability to write expressive and feature-rich applications. Quarkus has gained significant popularity in the MicroProfile community due to its impressive performance characteristics and developer-friendly features.
 
+=== Projects
+
+* link:quarkus-mongodb/[Simple CRUD REST application with Quarkus]
+
+
+== Apache TomEE
+
+image::pictures/tomee.png[Apache TomEE, width=150px]
+
+Apache TomEE is a lightweight, open-source Jakarta EE application server that is built on top of Apache Tomcat. It provides a full Java EE stack implementation, allowing developers to deploy and run enterprise applications that adhere to the Jakarta EE specifications.
+
+=== Projects
+
+* link:tomee-jnosql-sample/[Simple CRUD REST application with Apache TomEE]
 
 [cols="Table's name"]
 |===
