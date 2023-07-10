@@ -50,7 +50,7 @@ Apache TomEE is a lightweight, open-source Jakarta EE application server that is
 * link:tomee-jnosql-sample/[Simple CRUD REST application with Apache TomEE]
 
 
-== Tables
+== Table
 
 [cols="Table's name"]
 |===
