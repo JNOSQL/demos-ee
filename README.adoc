@@ -5,13 +5,19 @@ This documentation provides an overview of the integration between Eclipse JNoSQ
 
 == Open Liberty
 
+image::pictures/open-liberty.png[Open liberty, width=150px]
+
 Open Liberty is a lightweight and highly flexible open-source application server that supports the Jakarta EE and MicroProfile specifications. It offers a production-ready runtime environment focusing on rapid development and cloud-native deployments. Open Liberty provides extensive support for enterprise features like security, transactions, and messaging while ensuring a small footprint and fast startup times.
 
 == Wildfly
 
+image::pictures/wildfly.png[Widlfly, width=150px]
+
 WildFly, formerly JBoss Application Server, is an open-source, lightweight, and flexible application server built to support the Jakarta EE platform. It offers a complete Java EE-compatible runtime environment with a wide range of features and services required for enterprise-grade applications. WildFly strongly emphasizes standards compliance and provides extensive support for Jakarta EE specifications, making it a popular choice for Java developers.
 
 == Quarkus
+
+image::pictures/quarkus.png[Quarkus, width=150px]
 
 Quarkus is a modern Kubernetes-native Java framework designed for cloud-native application development. It aims to optimize developer productivity, resource utilization, and startup times without sacrificing the ability to write expressive and feature-rich applications. Quarkus has gained significant popularity in the MicroProfile community due to its impressive performance characteristics and developer-friendly features.
 
