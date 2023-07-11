@@ -12,19 +12,16 @@ import java.util.List;
 @Path("developers")
 @Consumes({MediaType.APPLICATION_JSON})
 @Produces({MediaType.APPLICATION_JSON})
-public class DevelopersResources {
+public class DevelopersResource {
 
     @Inject
     DocumentTemplate template;
 
     @GET
-    public List<Developer> listAll() {
-        return template.select(Developer.class).result();
-    }
+    public List<Developer> listAll(@QueryParam("name") String name) {
+        if (name == null)
+            return template.select(Developer.class).result();
 
-    @Path("/byName")
-    @GET
-    public List<Developer> findByName(@QueryParam("name") String name) {
         return template.select(Developer.class)
                 .where("name")
                 .like(name)
@@ -36,23 +33,34 @@ public class DevelopersResources {
 
     @POST
     public Developer add(NewDeveloperRequest request) {
-
         var newDeveloper = Developer.newDeveloper(request.name(), request.birthday());
-
         return template.insert(newDeveloper);
     }
 
     @Path("{id}")
     @GET
-    public Developer getDeveloper(@PathParam("id") String id) {
+    public Developer get(@PathParam("id") String id) {
         return template.find(Developer.class, id)
                 .orElseThrow(() -> new WebApplicationException(Response.Status.NOT_FOUND));
     }
 
+    public record UpdateDeveloperRequest(String name, LocalDate birthday) {
+    }
+
+    @Path("{id}")
+    @PUT
+    public Developer update(@PathParam("id") String id, UpdateDeveloperRequest request) {
+        var developer = template.find(Developer.class, id)
+                .orElseThrow(() -> new WebApplicationException(Response.Status.NOT_FOUND));
+        var updatedDeveloper = developer.update(request.name(), request.birthday());
+        return template.update(updatedDeveloper);
+
+    }
+
     @Path("{id}")
     @DELETE
-    public void deleteDeveloper(@PathParam("id") String id) {
-        template.delete(Developer.class,id);
+    public void delete(@PathParam("id") String id) {
+        template.delete(Developer.class, id);
     }
 
 }
