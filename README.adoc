@@ -37,7 +37,7 @@ Quarkus is a modern Kubernetes-native Java framework designed for cloud-native a
 === Projects
 
 * link:quarkus-mongodb/[Simple CRUD REST application with Quarkus]
-
+* link:quarkus-jnosql-mongodb/[Simple CRUD REST application with Quarkus using Records as entity]
 
 == Apache TomEE
 
@@ -48,42 +48,3 @@ Apache TomEE is a lightweight, open-source Jakarta EE application server that is
 === Projects
 
 * link:tomee-jnosql-sample/[Simple CRUD REST application with Apache TomEE]
-
-
-== Table
-
-[cols="Table's name"]
-|===
-|Name|MicroProfile/Jakarta EE Implementation|NoSQL types|Description
-
-|liberty-mongodb
-|MicroProfile - Open Liberty
-|MongoDB
-|Simple CRUD REST application with MicroProfile
-
-|wildfly-mongodb
-|Full Profile - Wildfly
-|MongoDB
-|Simple CRUD REST application with Wildfly 
-
-|jnosql-bean-validation
-|MicroProfile - OpenLiberty
-|MongoDB
-|Simple CRUD REST application with Jakarta Bean Validation integration
-
-|quarkus-mongodb
-|MicroProfile - Quarkus
-|MongoDB
-|Simple CRUD REST application with Quarkus
-
-|tomee-jnosql-sample
-|MicroProfile - Apache TomEE
-|MongoDB
-|Simple CRUD REST application with Apache TomEE
-
-|quarkus-jnosql-mongodb
-|MicroProfile - Quarkus
-|MongoDB
-|Simple CRUD REST application with Quarkus using Records as entity
-
-|===
