@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eclipse.jnosql.demoee</groupId>
     <artifactId>jnosql-bean-validation</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>war</packaging>
     <properties>
         <openliberty.maven.version>3.5.1</openliberty.maven.version>

@@ -4,7 +4,7 @@
 
     <groupId>org.jnosql</groupId>
     <artifactId>demo-ee</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
 
     <name>Demo codes using Jakarta EE and MicroProfile</name>
@@ -12,7 +12,7 @@
     <description>Sample codes in order to help developers use it as resources</description>
 
     <properties>
-        <jnosql.version>1.0.0-SNAPSHOT</jnosql.version>
+        <jnosql.version>1.0.1</jnosql.version>
     </properties>
     <modules>
         <module>liberty-mongodb</module>
