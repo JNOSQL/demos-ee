@@ -15,8 +15,28 @@ Open Liberty is a lightweight and highly flexible open-source application server
 
 === Projects
 
-* link:liberty-mongodb/[Simple CRUD REST application with MicroProfile]
-* link:jnosql-bean-validation/[Simple CRUD REST application with Jakarta Bean Validation integration]
+[cols="1,3,2"]
+|===
+| Module | Goal | Tech details
+
+| link:liberty-mongodb/[]
+| Simple CRUD REST application
+a|
+* MicroProfile:
+    ** Runtime: Open Liberty;
+* NoSQL database:
+    ** MongoDB;
+
+| link:jnosql-bean-validation/[]
+|Simple CRUD REST application with Jakarta Bean Validation support
+a|
+* MicroProfile:
+** Runtime: Open Liberty;
+* Jakarta Bean Validation;
+* NoSQL database:
+** MongoDB;
+
+|===
 
 == Wildfly
 
@@ -26,7 +46,19 @@ WildFly, formerly JBoss Application Server, is an open-source, lightweight, and 
 
 === Projects
 
-* link:wildfly-mongodb/[Simple CRUD REST application with Wildfly]
+[cols="1,3,2"]
+|===
+| Module | Goal | Tech details
+
+| link:wildfly-mongodb/[]
+| Simple CRUD REST application
+a|
+* Jakarta EE:
+** Runtime: Wildfly;
+* NoSQL database:
+** MongoDB;
+
+|===
 
 == Quarkus
 
@@ -36,8 +68,27 @@ Quarkus is a modern Kubernetes-native Java framework designed for cloud-native a
 
 === Projects
 
-* link:quarkus-mongodb/[Simple CRUD REST application with Quarkus]
-* link:quarkus-jnosql-mongodb/[Simple CRUD REST application with Quarkus using Records as entity]
+[cols="1,3,2"]
+|===
+| Module | Goal | Tech details
+
+| link:quarkus-mongodb/[]
+| Simple CRUD REST application
+a|
+* MicroProfile:
+** Runtime: Quarkus;
+* NoSQL database:
+** MongoDB;
+
+| link:quarkus-jnosql-mongodb/[]
+| Simple CRUD REST application with Quarkus using Records as entity
+a|
+* MicroProfile:
+** Runtime: Quarkus;
+* NoSQL database:
+** MongoDB;
+
+|===
 
 == Apache TomEE
 
@@ -47,4 +98,16 @@ Apache TomEE is a lightweight, open-source Jakarta EE application server that is
 
 === Projects
 
-* link:tomee-jnosql-sample/[Simple CRUD REST application with Apache TomEE]
+[cols="1,3,2"]
+|===
+| Module | Goal | Tech details
+
+| link:tomee-jnosql-sample/[]
+| Simple CRUD REST application
+a|
+* MicroProfile:
+** Runtime: Apache TomEE;
+* NoSQL database:
+** MongoDB;
+
+|===
