@@ -47,11 +47,6 @@
       <version>1.0.5</version>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jnosql.mapping</groupId>
-      <artifactId>jnosql-mapping-core</artifactId>
-      <version>1.0.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy-reactive-jackson</artifactId>
     </dependency>
