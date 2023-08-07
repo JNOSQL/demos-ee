@@ -17,24 +17,15 @@ Open Liberty is a lightweight and highly flexible open-source application server
 
 [cols="1,3,2"]
 |===
-| Module | Goal | Tech details
+| Module | Description | NoSQL
 
 | link:liberty-mongodb/[]
 | Simple CRUD REST application
-a|
-* MicroProfile:
-    ** Runtime: Open Liberty;
-* NoSQL database:
-    ** MongoDB;
+| MongoDB
 
 | link:jnosql-bean-validation/[]
-|Simple CRUD REST application with Jakarta Bean Validation support
-a|
-* MicroProfile:
-** Runtime: Open Liberty;
-* Jakarta Bean Validation;
-* NoSQL database:
-** MongoDB;
+|Simple CRUD REST application with *Jakarta Bean Validation* support
+| MongoDB
 
 |===
 
@@ -46,17 +37,13 @@ WildFly, formerly JBoss Application Server, is an open-source, lightweight, and 
 
 === Projects
 
-[cols="1,3,2"]
+[%autowidth]
 |===
-| Module | Goal | Tech details
+| Module | Description | NoSQL
 
 | link:wildfly-mongodb/[]
 | Simple CRUD REST application
-a|
-* Jakarta EE:
-** Runtime: Wildfly;
-* NoSQL database:
-** MongoDB;
+| MongoDB
 
 |===
 
@@ -68,25 +55,17 @@ Quarkus is a modern Kubernetes-native Java framework designed for cloud-native a
 
 === Projects
 
-[cols="1,3,2"]
+[%autowidth]
 |===
-| Module | Goal | Tech details
+| Module | Description | NoSQL
 
 | link:quarkus-mongodb/[]
 | Simple CRUD REST application
-a|
-* MicroProfile:
-** Runtime: Quarkus;
-* NoSQL database:
-** MongoDB;
+| MongoDB
 
 | link:quarkus-jnosql-mongodb/[]
-| Simple CRUD REST application with Quarkus using Records as entity
-a|
-* MicroProfile:
-** Runtime: Quarkus;
-* NoSQL database:
-** MongoDB;
+| Simple CRUD REST application using Records as entity
+| MongoDB
 
 |===
 
@@ -98,16 +77,12 @@ Apache TomEE is a lightweight, open-source Jakarta EE application server that is
 
 === Projects
 
-[cols="1,3,2"]
+[%autowidth]
 |===
-| Module | Goal | Tech details
+| Module | Description | NoSQL
 
 | link:tomee-jnosql-sample/[]
 | Simple CRUD REST application
-a|
-* MicroProfile:
-** Runtime: Apache TomEE;
-* NoSQL database:
-** MongoDB;
+| MongoDB;
 
 |===
