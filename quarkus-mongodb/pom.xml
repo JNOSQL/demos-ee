@@ -50,9 +50,21 @@
         <artifactId>quarkus-smallrye-openapi</artifactId>
       </dependency>
         <dependency>
-            <groupId>io.quarkiverse.jnosql</groupId>
-            <artifactId>quarkus-jnosql-document-mongodb</artifactId>
-            <version>1.0.5</version>
+            <groupId>org.eclipse.jnosql.databases</groupId>
+            <artifactId>jnosql-mongodb</artifactId>
+            <version>1.0.2-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.jnosql.mapping</groupId>
+                    <artifactId>jnosql-mapping-reflection</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jnosql.lite</groupId>
+            <artifactId>mapping-lite-processor</artifactId>
+            <version>1.0.2-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.github.javafaker</groupId>

@@ -25,7 +25,6 @@ public class FishResource {
     @Path("random")
     public Fish random(){
        return service.random();
-
     }
 
     @GET
