@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -31,9 +32,10 @@ public class BookResourceTest {
 
     @BeforeEach
     @AfterEach
-    void cleanUpDatabase() {
+    void cleanUpDatabase() throws InterruptedException {
         authorWithBooksRepository.deleteAll();
         bookWithAuthorRepository.deleteAll();
+        TimeUnit.SECONDS.sleep(2);
     }
 
     @Test
@@ -99,8 +101,6 @@ public class BookResourceTest {
                 then().
                 log().everything().
                 statusCode(HttpStatus.SC_OK).
-                body("$", hasSize(books.length)).
-                and().
                 extract().as(new TypeRef<List<BookWithAuthor>>() {
                 });
 

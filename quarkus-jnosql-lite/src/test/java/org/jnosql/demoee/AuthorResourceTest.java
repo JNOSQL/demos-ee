@@ -13,6 +13,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
@@ -32,9 +33,10 @@ public class AuthorResourceTest {
 
     @BeforeEach
     @AfterEach
-    void cleanUpDatabase() {
+    void cleanUpDatabase() throws InterruptedException {
         authorWithBooksRepository.deleteAll();
         bookWithAuthorRepository.deleteAll();
+        TimeUnit.SECONDS.sleep(2);
     }
 
     @Test
