@@ -12,7 +12,7 @@
     <description>Sample codes in order to help developers use it as resources</description>
 
     <properties>
-        <jnosql.version>1.0.1</jnosql.version>
+        <jnosql.version>1.0.2</jnosql.version>
     </properties>
     <modules>
         <module>liberty-mongodb</module>
