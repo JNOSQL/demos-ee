@@ -16,6 +16,7 @@
         <quarkus.platform.version>3.2.0.Final</quarkus.platform.version>
         <skipITs>true</skipITs>
         <surefire-plugin.version>3.0.0</surefire-plugin.version>
+        <jnosql.version>1.0.2</jnosql.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -52,7 +53,7 @@
         <dependency>
             <groupId>org.eclipse.jnosql.databases</groupId>
             <artifactId>jnosql-mongodb</artifactId>
-            <version>1.0.2-SNAPSHOT</version>
+            <version>${jnosql.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.eclipse.jnosql.mapping</groupId>
@@ -63,7 +64,7 @@
         <dependency>
             <groupId>org.eclipse.jnosql.lite</groupId>
             <artifactId>mapping-lite-processor</artifactId>
-            <version>1.0.2-SNAPSHOT</version>
+            <version>${jnosql.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
