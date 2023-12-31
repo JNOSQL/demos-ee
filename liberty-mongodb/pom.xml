@@ -15,7 +15,7 @@
     <maven.compiler.source>11</maven.compiler.source>
     <final.name>liberty-mongodb</final.name>
     <slf4j.api.version>1.7.30</slf4j.api.version>
-    <jnosql.version>1.0.3</jnosql.version>
+    <jnosql.version>1.0.4</jnosql.version>
   </properties>
   <dependencies>
     <dependency>
