@@ -45,7 +45,7 @@
         <dependency>
             <groupId>io.quarkiverse.jnosql</groupId>
             <artifactId>quarkus-jnosql-document-mongodb</artifactId>
-            <version>1.0.5</version>
+            <version>3.2.2.1</version>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
