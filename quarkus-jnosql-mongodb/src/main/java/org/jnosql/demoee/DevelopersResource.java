@@ -19,8 +19,9 @@ public class DevelopersResource {
 
     @GET
     public List<Developer> listAll(@QueryParam("name") String name) {
-        if (name == null)
+        if (name == null) {
             return template.select(Developer.class).result();
+        }
 
         return template.select(Developer.class)
                 .where("name")
