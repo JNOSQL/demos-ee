@@ -19,7 +19,7 @@
         <junit.version>5.6.0</junit.version>
         <http.port>8080</http.port>
         <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
-        <jnosql.version>1.0.4</jnosql.version>
+        <jnosql.version>1.1.0</jnosql.version>
     </properties>
 
     <build>
