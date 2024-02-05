@@ -1,5 +1,6 @@
 package org.jnosql.demoee;
 
+import jakarta.data.page.Pageable;
 import jakarta.data.repository.*;
 import jakarta.ws.rs.QueryParam;
 

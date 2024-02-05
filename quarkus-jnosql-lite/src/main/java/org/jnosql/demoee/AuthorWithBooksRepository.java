@@ -1,6 +1,6 @@
 package org.jnosql.demoee;
 
-import jakarta.data.repository.Pageable;
+import jakarta.data.page.Pageable;
 import jakarta.data.repository.PageableRepository;
 import jakarta.data.repository.Repository;
 

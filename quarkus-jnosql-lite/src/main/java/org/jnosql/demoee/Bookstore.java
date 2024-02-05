@@ -1,8 +1,6 @@
 package org.jnosql.demoee;
 
-import io.smallrye.config.ConfigMappingClassMapper;
-import jakarta.data.repository.Page;
-import jakarta.data.repository.Pageable;
+import jakarta.data.page.Pageable;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 

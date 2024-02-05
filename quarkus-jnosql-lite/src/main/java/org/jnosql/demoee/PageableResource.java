@@ -1,8 +1,9 @@
 package org.jnosql.demoee;
 
-import jakarta.data.repository.Direction;
-import jakarta.data.repository.Pageable;
-import jakarta.data.repository.Sort;
+
+import jakarta.data.Direction;
+import jakarta.data.page.Pageable;
+import jakarta.data.Sort;
 
 import java.util.Arrays;
 import java.util.Objects;
