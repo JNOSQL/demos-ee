@@ -21,6 +21,7 @@
         <module>quarkus-mongodb</module>
         <module>tomee-jnosql-sample</module>
         <module>quarkus-jnosql-mongodb</module>
+        <module>quarkus-jnosql-oracle-nosql</module>
         <module>quarkus-jnosql-lite</module>
     </modules>
 
