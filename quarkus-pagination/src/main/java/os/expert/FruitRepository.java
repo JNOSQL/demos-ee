@@ -18,4 +18,6 @@ public interface FruitRepository extends BasicRepository<Fruit, String> {
     @Find
     @OrderBy("name")
     Page<Fruit> offSet(PageRequest pageRequest);
+
+    long countBy();
 }

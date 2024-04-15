@@ -46,7 +46,7 @@ public class SetupDatabase {
 
     void onStop(@Observes ShutdownEvent ev) {
         LOGGER.info("The application is stopping...");
-        fruitRepository.deleteAll();
+        fruitRepository.deleteAll(fruitRepository.findAll().toList());
     }
 
 }
