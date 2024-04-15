@@ -12,7 +12,6 @@ import jakarta.ws.rs.core.MediaType;
 @Path("/fruits")
 public class FruitResource {
 
-    private static final int MAX_PAGE_SIZE = 2;
     private final FruitRepository fruitRepository;
 
     private static final Sort<Fruit> ASC = Sort.asc("name");
@@ -25,8 +24,9 @@ public class FruitResource {
     @Path("/offset")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Iterable<Fruit> hello(@QueryParam("page") @DefaultValue("1") long page) {
-        var pageRequest = PageRequest.ofPage(page).size(MAX_PAGE_SIZE);
+    public Iterable<Fruit> hello(@QueryParam("page") @DefaultValue("1") long page,
+                                 @QueryParam("size") @DefaultValue("2") int size) {
+        var pageRequest = PageRequest.ofPage(page).size(size);
         return fruitRepository.offSet(pageRequest).content();
     }
 
@@ -34,15 +34,16 @@ public class FruitResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Iterable<Fruit> cursor(@QueryParam("after") @DefaultValue("") String after,
-                                  @QueryParam("before") @DefaultValue("") String before) {
+                                  @QueryParam("before") @DefaultValue("") String before,
+                                  @QueryParam("size") @DefaultValue("2") int size) {
         if (!after.isBlank()) {
-            var pageRequest = PageRequest.ofSize(MAX_PAGE_SIZE).afterCursor(PageRequest.Cursor.forKey(after));
+            var pageRequest = PageRequest.ofSize(size).afterCursor(PageRequest.Cursor.forKey(after));
             return fruitRepository.cursor(pageRequest, ASC).content();
         } else if (!before.isBlank()) {
-            var pageRequest = PageRequest.ofSize(MAX_PAGE_SIZE).beforeCursor(PageRequest.Cursor.forKey(before));
+            var pageRequest = PageRequest.ofSize(size).beforeCursor(PageRequest.Cursor.forKey(before));
             return fruitRepository.cursor(pageRequest, DESC).stream().toList();
         }
-        var pageRequest = PageRequest.ofSize(MAX_PAGE_SIZE);
+        var pageRequest = PageRequest.ofSize(size);
         return fruitRepository.cursor(pageRequest, ASC).content();
     }
 }
