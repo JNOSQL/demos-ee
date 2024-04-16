@@ -43,7 +43,7 @@ public class FruitResource {
             var pageRequest = PageRequest.ofSize(size).beforeCursor(PageRequest.Cursor.forKey(before));
             return fruitRepository.cursor(pageRequest, DESC).stream().toList();
         }
-        var pageRequest = PageRequest.ofSize(size);
+        var pageRequest = PageRequest.ofSize(size).size(size);
         return fruitRepository.cursor(pageRequest, ASC).content();
     }
 }
