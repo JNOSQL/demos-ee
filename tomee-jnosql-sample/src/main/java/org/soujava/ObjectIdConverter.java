@@ -1,7 +1,7 @@
 package org.soujava;
 
+import jakarta.nosql.AttributeConverter;
 import org.bson.types.ObjectId;
-import org.eclipse.jnosql.mapping.AttributeConverter;
 
 public class ObjectIdConverter implements AttributeConverter<String, ObjectId> {
 

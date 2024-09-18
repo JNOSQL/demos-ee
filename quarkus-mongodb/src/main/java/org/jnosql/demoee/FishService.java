@@ -5,10 +5,9 @@ import com.github.javafaker.Animal;
 import com.github.javafaker.Faker;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import jakarta.nosql.document.DocumentTemplate;
-
 
 import org.bson.types.ObjectId;
+import org.eclipse.jnosql.mapping.document.DocumentTemplate;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,9 +1,9 @@
 package org.soujava;
 
 import jakarta.nosql.Column;
+import jakarta.nosql.Convert;
 import jakarta.nosql.Entity;
 import jakarta.nosql.Id;
-import org.eclipse.jnosql.mapping.Convert;
 
 import java.util.Objects;
 

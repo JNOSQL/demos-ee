@@ -3,8 +3,9 @@ package org.jnosql.demoee;
 import com.github.javafaker.Faker;
 
 
-import jakarta.data.page.Pageable;
+import jakarta.data.Order;
 import jakarta.data.Sort;
+import jakarta.data.page.PageRequest;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.DELETE;
@@ -53,8 +54,10 @@ public class DogResource {
     @GET
     public List<Dog> findAll(@QueryParam("page") @DefaultValue("1") long page,
                              @QueryParam("size") @DefaultValue("10") int size){
-        Pageable pageable = Pageable.ofPage(page).size(size).sortBy(Sort.asc("name"));
-       return this.repository.findAll(pageable).content();
+        PageRequest pageable = PageRequest.ofPage(page).size(size);
+
+        Order<Dog> order = Order.by(Sort.asc("name"));
+       return this.repository.findAll(pageable, order).content();
     }
 
     @POST

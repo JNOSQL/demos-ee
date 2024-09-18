@@ -2,21 +2,15 @@ package org.jnosql.demoee;
 
 
 import jakarta.data.Direction;
-import jakarta.data.page.Pageable;
+import jakarta.data.page.PageRequest;
 import jakarta.data.Sort;
 
-import java.util.Arrays;
-import java.util.Objects;
 
 public interface PageableResource {
 
 
-    default Pageable createPageable(String orderBy, int page, int pageSize) {
-        return Pageable.ofSize(pageSize).page(page)
-                .sortBy(Arrays.stream(orderBy.split(","))
-                        .map(this::convertToSort)
-                        .filter(Objects::nonNull)
-                        .toList());
+    default PageRequest createPageable(String orderBy, int page, int pageSize) {
+        return PageRequest.ofPage(page).size(pageSize);
     }
 
 

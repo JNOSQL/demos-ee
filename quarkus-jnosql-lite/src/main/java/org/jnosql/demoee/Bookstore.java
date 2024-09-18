@@ -1,6 +1,7 @@
 package org.jnosql.demoee;
 
-import jakarta.data.page.Pageable;
+import jakarta.data.Order;
+import jakarta.data.page.PageRequest;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
@@ -36,12 +37,12 @@ public class Bookstore {
         return author;
     }
 
-    public Stream<AuthorWithBooks> findAuthorsByName(String name, Pageable pageable) {
+    public Stream<AuthorWithBooks> findAuthorsByName(String name, PageRequest pageable) {
         return authorWithBooksRepository.findByName(name, pageable);
     }
 
-    public Stream<AuthorWithBooks> listAuthors(Pageable pageable) {
-        return authorWithBooksRepository.findAll(pageable).stream();
+    public Stream<AuthorWithBooks> listAuthors(PageRequest pageable) {
+        return authorWithBooksRepository.findAll(pageable, Order.by()).stream();
     }
 
     public Optional<AuthorWithBooks> findAuthorById(String authorId) {
@@ -58,11 +59,11 @@ public class Bookstore {
         return bookWithAuthor;
     }
 
-    public Stream<BookWithAuthor> findBooksByTitle(String title, Pageable pageable) {
+    public Stream<BookWithAuthor> findBooksByTitle(String title, PageRequest pageable) {
         return bookWithAuthorRepository.findByTitleLike(title, pageable);
     }
 
-    public Stream<BookWithAuthor> listBooks(Pageable pageable) {
-        return bookWithAuthorRepository.findAll(pageable).stream();
+    public Stream<BookWithAuthor> listBooks(PageRequest pageable) {
+        return bookWithAuthorRepository.findAll(pageable, Order.by()).stream();
     }
 }

@@ -1,12 +1,12 @@
 package org.jnosql.demoee;
 
-import jakarta.data.page.Pageable;
-import jakarta.data.repository.PageableRepository;
+import jakarta.data.page.PageRequest;
+import jakarta.data.repository.BasicRepository;
 import jakarta.data.repository.Repository;
 
 import java.util.stream.Stream;
 
 @Repository
-public interface AuthorWithBooksRepository extends PageableRepository<AuthorWithBooks, String> {
-    Stream<AuthorWithBooks> findByName(String name, Pageable pageable);
+public interface AuthorWithBooksRepository extends BasicRepository<AuthorWithBooks, String> {
+    Stream<AuthorWithBooks> findByName(String name, PageRequest pageable);
 }
