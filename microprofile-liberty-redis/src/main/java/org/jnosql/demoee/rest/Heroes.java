@@ -21,21 +21,18 @@ public class Heroes {
 
         var nameMatches = Optional
                 .ofNullable(heroesQuery.name())
-                .filter(Objects::nonNull)
                 .filter(Predicate.not(String::isBlank))
                 .map(m -> (Predicate<Hero>) h -> h.nameMatchesWith(m))
                 .orElse(null);
 
         var secretIdentityMatches = Optional
                 .ofNullable(heroesQuery.secretIdentity())
-                .filter(Objects::nonNull)
                 .filter(Predicate.not(String::isBlank))
                 .map(m -> (Predicate<Hero>) h -> h.secretIdentityMatchesWith(m))
                 .orElse(null);
 
         var impactPhraseMatches = Optional
                 .ofNullable(heroesQuery.impactPhrase())
-                .filter(Objects::nonNull)
                 .filter(Predicate.not(String::isBlank))
                 .map(m -> (Predicate<Hero>) h -> h.impactPhraseMatchesWith(m))
                 .orElse(null);
@@ -52,7 +49,7 @@ public class Heroes {
 
             return heroes.values()
                     .stream()
-                    .filter(((Predicate<Hero>) matcherFilters.orElse(h -> false))).toList();
+                    .filter(matcherFilters.orElse(h -> false)).toList();
         }
 
         return heroes.values().stream().toList();
