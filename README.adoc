@@ -27,6 +27,11 @@ Open Liberty is a lightweight and highly flexible open-source application server
 |Simple CRUD REST application with *Jakarta Bean Validation* support
 | MongoDB
 
+| link:microprofile-liberty-redis/[]
+| Simple CRUD REST application
+| Redis
+
+
 |===
 
 == Wildfly
@@ -86,3 +91,4 @@ Apache TomEE is a lightweight, open-source Jakarta EE application server that is
 | MongoDB
 
 |===
+
