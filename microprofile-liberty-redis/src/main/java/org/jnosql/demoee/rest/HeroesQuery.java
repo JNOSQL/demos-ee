@@ -2,8 +2,6 @@ package org.jnosql.demoee.rest;
 
 public record HeroesQuery(String name, String secretIdentity, String impactPhrase) {
 
-    static final HeroesQuery ALL = new HeroesQuery(null, null, null);
-
     static QueryBuilder queryBuilder() {
         return new QueryBuilder();
     }
