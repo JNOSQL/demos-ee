@@ -1,6 +1,6 @@
 = MicroProfile Open Liberty with Redis sample
 
-This project is intent to be a sample for MicroProfile with MongoDB integration by using Jakarta NoSQL implementation.
+This project is intent to be a sample for MicroProfile with Redis single node integration by using Jakarta NoSQL implementation.
 
 == Setup Redis
 
