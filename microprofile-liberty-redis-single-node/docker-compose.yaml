@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  redis-single-node:
+    container_name: "redis-single-node"
+    image: redis
+    command: redis-server
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-single-node-data:/data
+
+volumes:
+  redis-single-node-data:
+    driver: local
