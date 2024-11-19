@@ -9,15 +9,7 @@ image::https://jnosql.github.io/img/logos/redis.png[Redis Project,align="center"
 https://redis.com/[Redis] is a software project that implements data structure servers.
 It is open-source, networked, in-memory, and stores keys with optional durability.
 
-The project is configured to reach out a Redis instance with the following configuration:
-
-[source, text]
-----
-host:       localhost
-port:       6379
-----
-
-This Eclipse JNoSQL configuration is defined on the file `src/main/resources/META-INF/microprofile-config.properties`. More info about it, check the following link: https://github.com/eclipse/jnosql-databases?tab=readme-ov-file#configuration-14
+This required configuration to connect to Redis Sentinel is on the file `src/main/resources/META-INF/microprofile-config.properties`. More info about it, check the following link: https://github.com/eclipse/jnosql-databases?tab=readme-ov-file#configuration-14
 
 [source,properties]
 ----
@@ -33,21 +25,6 @@ You can run it by performing the following command:
 [source, bash]
 ----
 docker-compose up -d
-----
-
-== Local installation
-
-Follow the instructions in: https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/
-
-== Using Docker
-
-1. Install docker: https://www.docker.com/
-2. https://hub.docker.com/_/redis
-3. Run docker command
-
-[source, bash]
-----
-docker run -d --name redis-instance -p 6379:6379 redis
 ----
 
 == Run the code
@@ -75,9 +52,6 @@ unit and integration tests are run on pressing Enter in the command terminal; yo
 ----
 mvn liberty:dev
 ----
-
-
-
 
 To launch the test page, open your browser at the following URL
 
