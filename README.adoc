@@ -35,6 +35,9 @@ Open Liberty is a lightweight and highly flexible open-source application server
 | Simple CRUD REST application
 | Redis - Sentinel
 
+| link:microprofile-liberty-redis-cluster/[]
+| Simple CRUD REST application
+| Redis - Cluster
 
 |===
 
