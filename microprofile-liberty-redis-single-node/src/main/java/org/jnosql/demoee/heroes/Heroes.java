@@ -1,4 +1,4 @@
-package org.jnosql.demoee.rest;
+package org.jnosql.demoee.heroes;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;

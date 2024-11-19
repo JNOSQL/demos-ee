@@ -1,4 +1,4 @@
-package org.jnosql.demoee.rest;
+package org.jnosql.demoee.heroes;
 
 public record HeroesQuery(String name, String secretIdentity, String impactPhrase) {
 

@@ -27,10 +27,9 @@ Open Liberty is a lightweight and highly flexible open-source application server
 |Simple CRUD REST application with *Jakarta Bean Validation* support
 | MongoDB
 
-| link:microprofile-liberty-redis/[]
+| link:microprofile-liberty-redis-single-node/[]
 | Simple CRUD REST application
-| Redis
-
+| Redis - Single node
 
 |===
 

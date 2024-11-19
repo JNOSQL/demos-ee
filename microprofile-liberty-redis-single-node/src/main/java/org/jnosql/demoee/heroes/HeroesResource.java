@@ -1,4 +1,4 @@
-package org.jnosql.demoee.rest;
+package org.jnosql.demoee.heroes;
 
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
@@ -15,7 +15,7 @@ import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
-import static org.jnosql.demoee.rest.HeroesQuery.queryBuilder;
+import static org.jnosql.demoee.heroes.HeroesQuery.queryBuilder;
 
 @Path("/heroes")
 @Produces({MediaType.APPLICATION_JSON})

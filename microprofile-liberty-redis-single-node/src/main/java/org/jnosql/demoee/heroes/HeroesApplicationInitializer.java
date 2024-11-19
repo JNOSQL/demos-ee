@@ -1,4 +1,4 @@
-package org.jnosql.demoee.rest;
+package org.jnosql.demoee.heroes;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.context.Initialized;
@@ -9,7 +9,7 @@ import org.eclipse.jnosql.mapping.keyvalue.KeyValueDatabase;
 import java.util.Map;
 
 import static java.util.Set.of;
-import static org.jnosql.demoee.rest.Hero.newHero;
+import static org.jnosql.demoee.heroes.Hero.newHero;
 
 @ApplicationScoped
 public class HeroesApplicationInitializer {

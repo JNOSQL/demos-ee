@@ -1,9 +1,0 @@
-version: "3"
-
-services:
-  redis:
-    container_name: "redis-master"
-    image: redis
-    command: redis-server
-    ports:
-      - "6379:6379"

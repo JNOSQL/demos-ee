@@ -1,4 +1,4 @@
-package org.jnosql.demoee.rest;
+package org.jnosql.demoee.heroes;
 
 import jakarta.nosql.Column;
 import jakarta.nosql.Entity;

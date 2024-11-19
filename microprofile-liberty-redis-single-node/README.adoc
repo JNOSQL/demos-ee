@@ -9,15 +9,7 @@ image::https://jnosql.github.io/img/logos/redis.png[Redis Project,align="center"
 https://redis.com/[Redis] is a software project that implements data structure servers.
 It is open-source, networked, in-memory, and stores keys with optional durability.
 
-The project is configured to reach out a Redis instance with the following configuration:
-
-[source, text]
-----
-host:       localhost
-port:       6379
-----
-
-This Eclipse JNoSQL configuration is defined on the file `src/main/resources/META-INF/microprofile-config.properties`. More info about it, check the following link: https://github.com/eclipse/jnosql-databases?tab=readme-ov-file#configuration-14
+The project is configured to reach out a Redis instance with the following configuration defined on the file `src/main/resources/META-INF/microprofile-config.properties`. More info about it, check the following link: https://github.com/eclipse/jnosql-databases?tab=readme-ov-file#configuration-14
 
 [source,properties]
 ----
