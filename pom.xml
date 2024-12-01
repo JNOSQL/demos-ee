@@ -24,6 +24,9 @@
         <module>quarkus-jnosql-oracle-nosql</module>
         <module>quarkus-jnosql-lite</module>
         <module>quarkus-pagination</module>
+        <module>microprofile-liberty-redis-single-node</module>
+        <module>microprofile-liberty-redis-sentinel</module>
+        <module>microprofile-liberty-redis-cluster</module>
     </modules>
 
 </project>
