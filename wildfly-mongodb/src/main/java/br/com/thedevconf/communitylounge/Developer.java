@@ -3,7 +3,6 @@ package br.com.thedevconf.communitylounge;
 import jakarta.nosql.Column;
 import jakarta.nosql.Entity;
 import jakarta.nosql.Id;
-import jakarta.persistence.Convert;
 
 import java.util.List;
 import java.util.UUID;

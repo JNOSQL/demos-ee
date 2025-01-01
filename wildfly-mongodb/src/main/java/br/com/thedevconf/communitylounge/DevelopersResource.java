@@ -1,6 +1,5 @@
 package br.com.thedevconf.communitylounge;
 
-import jakarta.batch.operations.BatchRuntimeException;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
